@@ -2,6 +2,7 @@ package tech.adnanabbasi.employeemanager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tech.adnanabbasi.employeemanager.exception.UserNotFoundException;
 import tech.adnanabbasi.employeemanager.model.Employee;
 import tech.adnanabbasi.employeemanager.repo.EmployeeRepo;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
     private final EmployeeRepo employeeRepo;
 
